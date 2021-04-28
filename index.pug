@@ -1,0 +1,35 @@
+doctype html
+html(lang="sp")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style.css")
+        title Sintaxis css
+    body 
+        -var n = 1;
+        -var i = 1;
+        -var x = 1;
+        while n <= 1
+            h1 Soy la etiqueta h1 ##{n++}
+        h1(class="h1-clase") Soy la etiqueta h1 atributo clase
+        h2 Soy la etiqueta h2
+        p(class="h1-clase") soy el parrafo
+        
+        mixin caja(nom,identificador="")
+            div(id=identificador)=nom
+
+        while i <= 5
+            +caja("Caja"+i,"id_caja_"+i)
+            -i++; 
+        
+        p(miguel="23") soy el parra y mi atributo es 'miguel="23"'
+        while x < 3
+            a(href="#"+x) Soy el impervinculo #{x} <br>
+            -x++;
+        h1 Hola mundo
+        p Hola mundo 
+        small Hola Mundo 
+        h6 Hola Mundo 
+
+
